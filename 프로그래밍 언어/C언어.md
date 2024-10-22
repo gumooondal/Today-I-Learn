@@ -121,10 +121,21 @@ void func(int i){
 
 3/4 = 0
 
+```
 a=10; // a는 11 - > 12
 b = a++; // b는 10
 c =++a; //c는 12
-
+```
+```
 a= 10
 a+=10;
 a = a+10 // a는 20
+```
+```
+#include<stadio.h>
+void main(){
+a=4*(1/2); 
+b=a++
+printf(“%d”, b);
+}
+```
