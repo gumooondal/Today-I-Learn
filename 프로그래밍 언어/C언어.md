@@ -53,3 +53,35 @@ else
 - long - 4Byte
 - float - Byte
 - double - 8Byte
+
+지역변수
+- 함수 안에서 선언
+- 함수의 종료와 함께 메모리 상에서 소멸
+- 초기값이 없으면 쓰레기 값이 들어감
+- 스택 영역에 저장됨
+```
+void main(){
+	if(1){
+		int num1 = 10
+		printf(“%d”, num1)
+	}
+	printf(“%d”, num1) //오류남
+}
+```
+전역변수
+함수 밖에서 선언
+프로그램이 종료될 때 메모리상에서 소멸
+초기값이 없으면 0값이 들어감
+데이터 영역에 저장됨
+```
+int num1;
+void main(){
+	num1 = 10;
+	printf(“%d”, num1) //10
+	func();
+	printf(“%d”, num1) //20
+}
+void func(){
+	num1=20;
+}
+```
