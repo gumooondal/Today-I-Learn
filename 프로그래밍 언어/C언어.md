@@ -45,3 +45,11 @@ else
 - 첫 글자는 영문과 언더바(_)만 사용 가능하다.
 - 언더바(_) 이외의 특수문자는 사용할 수 없다.
 - 대소문자는 구분한다
+
+데이터 타입 (자료형)
+- char - 1Byte
+- short - 2Byte
+- int - 4Byte
+- long - 4Byte
+- float - Byte
+- double - 8Byte
