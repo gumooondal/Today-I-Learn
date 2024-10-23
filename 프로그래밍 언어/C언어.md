@@ -154,7 +154,7 @@ printf(“%d”, b);
 논리 : &&, || <br>
 대입 : =, +=, -=, *=, /=, %= <br>
 
-int a = 3; int b =4; int c = 5; int = 6; <br>
+int a = 3 , b =4 , c = 5 , d = 6; <br>
 1.a*b+c>=d && d/a-b!=0= <br>
 12			2 <br>
 	+5			-4 <br>
@@ -165,3 +165,22 @@ int a = 3; int b =4; int c = 5; int = 6; <br>
 2.d%b+++a*c—= <br>
       2	   20 <br>
 	    22 <br>
+```
+#include<stadio.h>
+void main(){
+int a=5, b = 5; 
+a *=3 + b++; // 3+5 -> a = 5*8
+printf(“%d %d”, a,b); //40 , 6
+return 0;
+}
+```
+# 06. 관계/논리연산자,조건문
+```
+#include<stadio.h>
+void main(){
+int i=3, j = 4; 
+if(++i > j—) && (i++ < —j) i = i— + ++j; // 앞에 조건이 거짓이면 뒤에 조건은 아예 실행은x
+else j = i— - —j;
+printf(“%d\n”, i); //3
+}
+```
