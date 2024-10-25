@@ -186,19 +186,48 @@ printf(“%d\n”, i); //3
 ```
 # 08. 논리연산자
 
-int a = 3 + 5, b =1 , c;
-int ap, bp;
-ap = a++; // 8
-bp = ++b; // 2
-b = 3 * (ap == 8); // 3
-c = 5 * (ap != 8);  // 0
-printf(“%d %d %d %d %d” , a, b, c, ap, bp);
-9 , 3 , 0 , 8 , 2
+int a = 3 + 5, b =1 , c; <br>
+int ap, bp; <br>
+ap = a++; // 8 <br>
+bp = ++b; // 2 <br>
+b = 3 * (ap == 8); // 3 <br>
+c = 5 * (ap != 8);  // 0 <br>
+printf(“%d %d %d %d %d” , a, b, c, ap, bp); <br>
+9 , 3 , 0 , 8 , 2 <br>
 
 # 09. 산술연산자
 
-num = 6 + 14 % 5 / 2 - 2 * 2; // 4
+num = 6 + 14 % 5 / 2 - 2 * 2; // 4 <br>
 
-int a = 10, b = 20;
-num = (a++ == 11) && (b++ == 20); // 첫 조건 0이면 뒤에는 할 필요없으
+int a = 10, b = 20; <br>
+num = (a++ == 11) && (b++ == 20); // 첫 조건 0이면 뒤에는 할 필요없음 <br>
 
+# 10. 출력형식
+%d 부호 있는 10진수 출력 - 정수, 문자(A는 65라는 값을 가지고 있음) <br>
+%f 고정 소수점으로 출력 - 정수, 실수 <br>
+%c 문자 출력 - 문자 // 65를 입력하면 A를 출력함 <br>
+%s 문자열 출력 - 문자열 포인터 <br>
+%x 16진수 출력 - 정수 <br>
+%o 8진수 출력 - 정수 <br>
+
+정수형 자리수 지정 <br>
+printf(“값 : %x”, 34); 22 <br>
+32 16 8 4 2 1 <br>
+ 1    0  0 0 1 0 <br>
+printf(“값 : %x”, 34); 42 <br>
+printf(“값 : %5d”, 13); // 5공간, 오른쪽부터 채움 null null null 1 3 <br>
+printf(“값 : %05d”, 13); // 비어있는 공간 0으로 채움 0 0 0 1 3 <br>
+
+실수형 자리수 지정 <br>
+1.print(“값 : %f”, 3.26); // 3 . 2 6 0 0 0 0 출력결과 <br>
+2.print(“값 : %6.1f”, 3.3); // 6개의공간, 소수점 1자리 null null null 3 . 3 <br>
+3.print(“값 : %-6.1f”, 3.26); // 3 . 3 null null null 반옴림 <br>
+4.print(“값 : %-6.3f”, 3.26); // 3 . 2 6 0 null <br>
+
+double d_value; <br>
+float f_value = 5.65; <br>
+int n; <br>
+d_value = f_value; <br>
+d_value = d_value+0.5; // 5.65->6.15 <br>
+n = (int)d_value; //6 <br>
+print(“%3.1f, %d”, d_value, n); // 6.2 , 6 <br>
